@@ -1,10 +1,11 @@
 import { Router } from "express";
-import { getAllComments } from "../controllers/comments.controller.js";
+import controller from "../controllers/comments.controller";
+
 const router = Router();
 
 
 // Récupérer toute les routes
-router.get('/', getAllComments);
+router.get('/', controller.getAll);
 
 // Récupérer une route
 router.get('/:id', (req, res) => {});
